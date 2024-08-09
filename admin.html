@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin View</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex justify-center items-center min-h-screen p-8">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-3xl mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-center">Lista de Aprendices que han presentado la prueba</h1>
+        <ul id="aprendiz-list" class="space-y-2 mb-6">
+            <!-- Lista de aprendices se mostrará aquí -->
+        </ul>
+        <!-- Botón Volver -->
+        <div class="text-center">
+            <button
+                onclick="volverAlInicio()"
+                class="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            >
+                Volver
+            </button>
+        </div>
+    </div>
+    <script>
+        // Obtener los usuarios del localStorage
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Filtrar solo los usuarios con rol "aprendiz"
+        const aprendices = users.filter(user => user.role === "aprendiz");
+
+        // Mostrar los nombres de los aprendices en la lista
+        const aprendizList = document.getElementById("aprendiz-list");
+        aprendices.forEach(user => {
+            const li = document.createElement("li");
+            li.textContent = user.fullName;
+            li.classList.add("bg-gray-700", "p-3", "rounded-md");
+            aprendizList.appendChild(li);
+        });
+
+        // Función para redirigir al index.html
+        function volverAlInicio() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

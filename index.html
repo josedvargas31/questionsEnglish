@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>English Test - Login</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<meta http-equiv="Content-Language" content="en" />
+		<meta name="google" value="notranslate" />
+	</head>
+	<body
+		class="bg-gray-900 flex justify-center items-center h-screen overflow-hidden"
+	>
+		<div
+			class="bg-gray-800 text-white p-4 rounded-lg shadow-md w-full max-w-6xl mx-auto sm:max-w-5xl md:max-w-4xl lg:max-w-4xl flex flex-col items-center"
+		>
+			<div class="w-full text-center mb-6">
+				<h1 class="text-lg font-bold mb-2">Welcome to our testing section</h1>
+				<p class="text-sm">
+					Please enter your full name, role, and test date to proceed.
+				</p>
+			</div>
+			<div class="w-full mt-4">
+				<form class="space-y-4 w-full max-w-3xl mx-auto">
+					<div class="grid grid-cols-1 gap-6">
+						<div>
+							<label for="full_name" class="block text-sm mb-1">Full name:</label>
+							<input
+								type="text"
+								id="full_name"
+								class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm focus:outline-none focus:border-blue-500"
+							/>
+						</div>
+						<div>
+							<label for="role" class="block text-sm mb-1">Role:</label>
+							<select
+								id="role"
+								class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm focus:outline-none focus:border-blue-500"
+							>
+								<option value="aprendiz">Aprendiz</option>
+								<option value="administrador">Administrador</option>
+							</select>
+						</div>
+						<div>
+							<label for="test_date" class="block text-sm mb-1">Test Date:</label>
+							<input
+								type="date"
+								id="test_date"
+								class="w-full p-3 rounded-md bg-gray-700 border border-gray-600 text-white text-sm"
+							/>
+						</div>
+					</div>
+					<div class="text-center mt-4">
+						<button
+							type="button"
+							onclick="storeData()"
+							class="px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700"
+						>
+							Start test
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="./js/validacion.js" defer></script>
+	</body>
+</html>

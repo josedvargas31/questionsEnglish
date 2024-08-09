@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Questions English</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./js/preguntas.js" defer></script>
+	</head>
+	<body
+		class="bg-gray-900 text-white flex justify-center items-center min-h-screen"
+	>
+		<div class="w-full max-w-7xl p-4">
+			<div class="bg-green-500 text-center py-2 mb-4">
+				<h1 class="text-2xl font-bold">LANGUAGE USE</h1>
+				<div id="tiempoTranscurrido">
+					Tiempo transcurrido: <span id="contador">00:00</span>
+					<h1 class="text-2xl font-bold mb-4">Welcome, <span id="userName">User</span>!</h1>
+				</div>
+			</div>
+			<div class="bg-gray-500 p-4 rounded-lg shadow-md mb-4 flex">
+				<img src="./img/personaM.png" alt="Person" class="h-40 ml-40 mr-20" />
+				<div class="ml-4 mt-8">
+					<p>Choose the best answer for each question.</p>
+					<p>You have <strong>20 minutes</strong> to complete this section.</p>
+					<p>It has <strong>50 questions</strong>.</p>
+					<p>You may begin now:</p>
+				</div>
+			</div>
+			<form id="quizForm">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+					<!-- Question 1 -->
+					<div>
+						<p class="text-xl mb-2">
+							1 - How old
+							<select
+								id="question1"
+								name="question1"
+								class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+							>
+								<option value="" selected>_____</option>
+								<option value="are">are</option>
+								<option value="is">is</option>
+								<option value="am">am</option>
+							</select>
+							you?
+						</p>
+					</div>
+					<!-- Question 2 -->
+					<div>
+						<p class="text-xl mb-2">
+							2 -
+							<select
+								id="question2"
+								name="question2"
+								class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+							>
+								<option value="" selected>_____</option>
+								<option value="can">Can</option>
+								<option value="am">Am</option>
+								<option value="does">Does</option>
+							</select>
+							I help you?
+						</p>
+					</div>
+					<!-- Question 3 -->
+					<div>
+						<p class="text-xl mb-2">
+							3 -
+							<select
+								id="question3"
+								name="question3"
+								class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+							>
+								<option value="" selected>_____</option>
+								<option value="who">Who</option>
+								<option value="where">Where</option>
+								<option value="when">When</option>
+							</select>
+							is your car?
+						</p>
+					</div>
+					<!-- Question 4 -->
+					<div>
+						<p class="text-xl mb-2">
+							4 - What is
+							<select
+								id="question4"
+								name="question4"
+								class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+							>
+								<option value="" selected>_____</option>
+								<option value="he">He</option>
+								<option value="your">Your</option>
+								<option value="mine">mine</option>
+							</select>
+							favorite hobby?
+						</p>
+					</div>
+					<!-- Question 5 -->
+					<div>
+						<p class="text-xl mb-2">
+							5 - Kate
+							<select
+								id="question5"
+								name="question5"
+								class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+							>
+								<option value="" selected>_____</option>
+								<option value="have">have</option>
+								<option value="do">do</option>
+								<option value="has">has</option>
+							</select>
+							an English book.
+						</p>
+					</div>
+				</div>
+				<button
+					type="button"
+					class="flex justify-center px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 hover:text-white mt-4"
+					onclick="NavigationResult()"
+				>
+					Send
+				</button>
+			</form>
+		</div>
+	</body>
+</html>
